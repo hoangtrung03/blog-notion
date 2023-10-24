@@ -120,5 +120,6 @@ const StyledWrapper = styled.div`
   }
   .notion-page {
     padding: 0;
+    width: 100% !important;
   }
 `
