@@ -73,6 +73,9 @@ export const Global = () => {
           margin: 0;
           border-top: 1px solid ${theme.colors.gray6};
         }
+        .notion .notion-code {
+          padding: 30px 20px;
+        }
       `}
     />
   )

@@ -5,10 +5,13 @@ import Header from "./Header"
 import styled from "@emotion/styled"
 import Scripts from "src/layouts/RootLayout/Scripts"
 import useGtagEffect from "./useGtagEffect"
+import { Inter } from 'next/font/google'
 
 type Props = {
   children: ReactNode
 }
+
+const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout = ({ children }: Props) => {
   const [scheme] = useScheme()
@@ -19,7 +22,7 @@ const RootLayout = ({ children }: Props) => {
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
       <Header fullWidth={false} />
-      <StyledMain>{children}</StyledMain>
+      <StyledMain className={inter.className}>{children}</StyledMain>
     </ThemeProvider>
   )
 }
